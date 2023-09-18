@@ -33,3 +33,6 @@ void Even_Numbers(int[] arr)
 int[] arr = new int[RandSize()];
 RandElements(arr);
 Even_Numbers(arr);
+
+Thread.Sleep(5000);
+Console.Clear(); 
