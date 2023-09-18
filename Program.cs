@@ -14,13 +14,13 @@
         }
     }
 
-    void Min(double[] arr)
+    double Min(double[] arr)
     {
-        int min = arr[0];
+        double min = arr[0];
         for (int i = 0; i < arr.Length; i++)
         {
            System.Console.Write($" {arr[i]} ");
-           if(min < arr[i])
+           if(arr[i] < min)
            {
             min = arr[i];
            }
@@ -30,10 +30,27 @@
         System.Console.WriteLine(max);
         double min = arr.Min();
         System.Console.WriteLine(min);*/
+    return min;
     }
+
+    double Max(double[] arr)
+    {
+        double max = arr[0];
+        for (int i = 0; i < arr.Length; i++)
+        {
+           System.Console.Write($" {arr[i]} ");
+           if(max < arr[i])
+           {
+            max = arr[i];
+           }
+        }
+        return max;
+    }
+
 
     double[] arr = new double[RandSize()];
     RandElements(arr);
-    
+    Min(arr);
+    Max(arr);
     Thread.Sleep(10000);
     Console.Clear(); 
