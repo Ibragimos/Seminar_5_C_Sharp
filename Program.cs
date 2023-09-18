@@ -14,7 +14,21 @@ void RandElements(int[] arr)
         }
     }
 
+void SumOddElements(int[] arr)
+{
+    int sum = 0;
+    for (int i = 0; i < arr.Length; i++)
+    {
+        if(arr[i] % 2 != 0)
+        {
+            System.Console.Write($" {arr[i]}");
+            sum += arr[i];
 
+        }
+    }
+    System.Console.WriteLine($" Sum Odd Elements = {sum}");
+}
 
 int[] arr = new int[RandSize()];
 RandElements(arr);
+SumOddElements(arr);
