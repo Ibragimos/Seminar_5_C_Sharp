@@ -25,12 +25,7 @@
             min = arr[i];
            }
         }
-        /*System.Console.WriteLine();
-        double max = arr.Max();
-        System.Console.WriteLine(max);
-        double min = arr.Min();
-        System.Console.WriteLine(min);*/
-    return min;
+        return min;
     }
 
     double Max(double[] arr)
@@ -38,7 +33,6 @@
         double max = arr[0];
         for (int i = 0; i < arr.Length; i++)
         {
-           System.Console.Write($" {arr[i]} ");
            if(max < arr[i])
            {
             max = arr[i];
@@ -52,5 +46,12 @@
     RandElements(arr);
     Min(arr);
     Max(arr);
+    sum = Min(arr) + Max(arr);
+    System.Console.WriteLine(sum);
     Thread.Sleep(10000);
     Console.Clear(); 
+     /*System.Console.WriteLine();
+        double max = arr.Max();
+        System.Console.WriteLine(max);
+        double min = arr.Min();
+        System.Console.WriteLine(min);*/
