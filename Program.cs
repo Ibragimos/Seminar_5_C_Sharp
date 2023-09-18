@@ -10,7 +10,7 @@ void RandElements(int[] arr)
     {
         for (int i = 0; i < arr.Length; i++)
         {
-            arr[i] = random.Next(99, 1000);
+            arr[i] = random.Next(-30, 30);
         }
     }
 
@@ -32,3 +32,6 @@ void SumOddElements(int[] arr)
 int[] arr = new int[RandSize()];
 RandElements(arr);
 SumOddElements(arr);
+
+Thread.Sleep(5000);
+Console.Clear(); 
