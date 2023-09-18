@@ -19,12 +19,12 @@
         double min = arr[0];
         for (int i = 0; i < arr.Length; i++)
         {
-           System.Console.Write($" {arr[i]} ");
            if(arr[i] < min)
            {
             min = arr[i];
            }
         }
+        System.Console.WriteLine($" min = {min}");
         return min;
     }
 
@@ -38,17 +38,25 @@
             max = arr[i];
            }
         }
+        System.Console.WriteLine($" max = {max}");
         return max;
     }
 
+double Diff(double[] arr)
+{
+    double max = Max(arr);
+    double min = Min(arr);
+    double diff = max - min;
+    System.Console.WriteLine($" max - min = {diff}");
+    return diff;
+}
 
     double[] arr = new double[RandSize()];
     RandElements(arr);
-    Min(arr);
-    Max(arr);
-    sum = Min(arr) + Max(arr);
-    System.Console.WriteLine(sum);
-    Thread.Sleep(10000);
+    string s = string.Join(" ", arr);
+    System.Console.Write($"{s}\n");
+    Diff(arr);
+    Thread.Sleep(4000);
     Console.Clear(); 
      /*System.Console.WriteLine();
         double max = arr.Max();
